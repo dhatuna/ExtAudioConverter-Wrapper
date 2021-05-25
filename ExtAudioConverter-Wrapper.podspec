@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ExtAudioConverter-Wrapper'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'Integrate lame.framework dependency with ExtAudioConverter.'
 
   s.description      = "ExtAudioConverter-Wrapper is a copy of ExtAudioConverter provided by lixing123"

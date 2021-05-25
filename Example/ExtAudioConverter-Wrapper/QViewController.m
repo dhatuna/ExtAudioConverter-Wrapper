@@ -8,7 +8,7 @@
 
 #import "QViewController.h"
 
-#import <ExtAudioConverter_Wrapper/ExtAudioConverter.h>
+#import <ExtAudioConverter_Wrapper/ExtAudioConverter-Wrapper.h>
 
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
@@ -39,29 +39,29 @@
 }
 
 - (void)convert {
-//    NSString *inputPath = [[NSBundle mainBundle] pathForResource:@"source" ofType:@"m4a"];
-//    NSURL *outputURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] firstObject] URLByAppendingPathComponent:@"output.mp3"];
-//    NSString *outputPath = outputURL.path;
-//
-//    NSLog(@"Input Path: %@", inputPath);
-//    NSLog(@"Output Path: %@", outputPath);
-//
-//    ExtAudioConverter *converter = [[ExtAudioConverter alloc] init];
-//    converter.inputFilePath = inputPath;
-//    converter.outputFilePath = outputPath;
-//    converter.outputFormatID = kAudioFormatMPEGLayer3;
-//    if ([converter convert]) {
-//        self.statusLabel.text = @"It worked!";
-//        AVPlayer *player = [AVPlayer playerWithURL:outputURL];
-//        AVPlayerViewController *vc = [[AVPlayerViewController alloc] init];
-//        vc.player = player;
-//        [self presentViewController:vc animated:YES completion:^{
-//            [player play];
-//        }];
-//    }
-//    else {
-//        self.statusLabel.text = @"It failed!";
-//    }
+    NSString *inputPath = [[NSBundle mainBundle] pathForResource:@"source" ofType:@"m4a"];
+    NSURL *outputURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] firstObject] URLByAppendingPathComponent:@"output.mp3"];
+    NSString *outputPath = outputURL.path;
+
+    NSLog(@"Input Path: %@", inputPath);
+    NSLog(@"Output Path: %@", outputPath);
+
+    ExtAudioConverter *converter = [[ExtAudioConverter alloc] init];
+    converter.inputFilePath = inputPath;
+    converter.outputFilePath = outputPath;
+    converter.outputFormatID = kAudioFormatMPEGLayer3;
+    if ([converter convert]) {
+        self.statusLabel.text = @"It worked!";
+        AVPlayer *player = [AVPlayer playerWithURL:outputURL];
+        AVPlayerViewController *vc = [[AVPlayerViewController alloc] init];
+        vc.player = player;
+        [self presentViewController:vc animated:YES completion:^{
+            [player play];
+        }];
+    }
+    else {
+        self.statusLabel.text = @"It failed!";
+    }
 }
 
 
