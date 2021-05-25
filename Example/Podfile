@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'ExtAudioConverter-Wrapper_Example' do
+  pod 'ExtAudioConverter-Wrapper', :path => '../'
+
+  target 'ExtAudioConverter-Wrapper_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
