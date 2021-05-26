@@ -22,7 +22,7 @@ pod 'ExtAudioConverter-Wrapper'
 
 ## Author
 
-jk-gna, junq.jeon@gmail.com
+jk.jeon, junq.jeon@gmail.com
 
 ## License
 
